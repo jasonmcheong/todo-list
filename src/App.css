@@ -1,5 +1,9 @@
 @import 'reset.css';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: linear-gradient(to right, #313866 20%, #576081);
     height: 100vh;
@@ -20,4 +24,78 @@ body {
     transform: translate(-50%, -20%);
     -webkit-box-shadow: 0px 0px 5px 5px rgba(244, 158, 49, 0.1);
     box-shadow: 0px 0px 5px 5px rgba(244, 158, 49, 0.1);
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+ul {
+    margin-bottom: 15px;
+}
+li {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 10px 25px;
+    border-radius: 3px;
+    background: #756788;
+    box-shadow: 10px 10px 8px #313866;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    font-size: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 10px 25px;
+    color: #fff;
+    background: rgba(117, 103, 136, 0.4);
+    border-radius: 3px;
+    border: none;
+}
+input::placeholder {
+    color: #fff;
+}
+.btn {
+    display: block;
+    position: relative;
+    top: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    background: linear-gradient(to bottom right, #f49e31, #ce780b);
+    border: none;
+    border-radius: 20px;
+    width: 180px;
+    z-index: 2;
+    transition: background 0.5s;
+    padding-left: 0;
+}
+.btn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 100%;
+    border-radius: 20px;
+    background: #f49e31;
+    padding: 10px 0;
+    transition: background 0.9s;
+}
+
+.btn span:hover {
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.9s;
 }

@@ -23,7 +23,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h2>To Do List</h2>
+                <h1>To Do List</h1>
                 <ListDisplay tasks={this.state.tasks} />
                 <ListInput addTask={this.addTask} />
             </div>

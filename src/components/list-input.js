@@ -19,18 +19,25 @@ class ListInput extends React.Component {
     }
 
     handleSubmit() {
-        this.props.addTask(this.state.task);
-        this.setState({
-            task: '',
-        });
+        if (this.state.task) {
+            this.props.addTask(this.state.task);
+            this.setState({
+                task: '',
+            });
+        }
     }
 
     render() {
         return (
-            <div>
-                <input type="text" onChange={evt => this.handleChange(evt)} value={this.state.task} />
+            <div className="user-input">
+                <input
+                    type="text"
+                    onChange={evt => this.handleChange(evt)}
+                    value={this.state.task}
+                    placeholder="Enter a task"
+                />
                 <button className="btn" onClick={this.handleSubmit}>
-                    + Add Task
+                    <span>Add Task</span>
                 </button>
             </div>
         );
