@@ -36,14 +36,27 @@ ul {
     margin-bottom: 15px;
 }
 li {
+    display: flex;
+    justify-content: space-between;
     width: 80%;
     margin: 0 auto;
-    padding: 10px 0 10px 25px;
+    padding: 10px 15px;
     border-radius: 3px;
     background: #756788;
     box-shadow: 10px 10px 8px #313866;
     margin-bottom: 15px;
     text-transform: capitalize;
+}
+.fa-trash-alt {
+    color: rgba(255, 255, 255, 0.1);
+    transition: all 0.2s;
+}
+li:hover {
+    cursor: pointer;
+}
+li:hover .fa-trash-alt {
+    color: #ff4e4e;
+    transition: 0.2s;
 }
 
 .user-input {

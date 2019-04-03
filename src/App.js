@@ -12,6 +12,7 @@ class App extends Component {
         super(props);
 
         this.addTask = this.addTask.bind(this);
+        this.deleteTask = this.deleteTask.bind(this);
     }
 
     addTask(value) {
@@ -20,11 +21,19 @@ class App extends Component {
         });
     }
 
+    deleteTask(idx) {
+        const array = [...this.state.tasks];
+        array.splice(idx, 1);
+        this.setState({
+            tasks: array,
+        });
+    }
+
     render() {
         return (
             <div className="App">
                 <h1>To Do List</h1>
-                <ListDisplay tasks={this.state.tasks} />
+                <ListDisplay tasks={this.state.tasks} delete={this.deleteTask} />
                 <ListInput addTask={this.addTask} />
             </div>
         );
