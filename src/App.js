@@ -21,6 +21,7 @@ class App extends Component {
         this.hydrateStateWithLocalStorage();
     }
 
+    // Used to retrieve local storage data and update the list-display
     hydrateStateWithLocalStorage() {
         // for all items in state
         for (let tasks in this.state) {
@@ -32,18 +33,11 @@ class App extends Component {
                 this.setState({
                     tasks: array,
                 });
-                // parse the localStorage string and setState
-                // try {
-                //     value = JSON.parse(value);
-                //     this.setState({ tasks: value });
-                // } catch (e) {
-                //     // handle empty string
-                //     this.setState({ tasks: value });
-                // }
             }
         }
     }
 
+    // Adding the task from list-input
     addTask(value) {
         let add = [...this.state.tasks, value];
         this.setState({
@@ -52,6 +46,7 @@ class App extends Component {
         localStorage.setItem(tasks, add);
     }
 
+    // Deleting the task from list-display
     deleteTask(idx) {
         const array = [...this.state.tasks];
         array.splice(idx, 1);
